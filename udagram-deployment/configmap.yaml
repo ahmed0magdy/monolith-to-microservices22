@@ -1,0 +1,6 @@
+POSTGRES_HOST = postgresdev.ccra4equlstx.us-east-1.rds.amazonaws.com
+POSTGRES_DB = postgresdev
+AWS_BUCKET = test-108135139166-dev
+AWS_REGION = us-east-1
+JWT_SECRET = testing
+URL = http://localhost:8100

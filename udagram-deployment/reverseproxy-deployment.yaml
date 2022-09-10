@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reverseproxy
+  labels:
+    app: reverseproxy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: reverseproxy
+  template:
+    metadata:
+      labels:
+        app: reverseproxy
+    spec:
+      containers:
+      - name: reverseproxy
+        image: megop/udagram-reverseproxy:latest
+        resources:
+          requests:
+            memory: "1000Mi"
+          limits:
+            memory: "2000Mi"
+        ports:
+        - containerPort: 8080
